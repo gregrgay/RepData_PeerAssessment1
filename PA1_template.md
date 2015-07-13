@@ -12,7 +12,7 @@ The variables included in this dataset are:
 
 The dataset is stored in a comma-separated-value (CSV) file and there are a total of 17,568 observations in this dataset.
 
-The data can be found in the [activity.zip file on GitHub](https://github.com/gregrgay/RepData_PeerAssessment1/blob/master/activity.zip) 
+The data can be found in the [activity.zip file on GitHub](https://github.com/gregrgay/RepData_PeerAssessment1/blob/master/activity.zip) or [activity.csv for a text version](https://github.com/gregrgay/RepData_PeerAssessment1/blob/master/activity.csv)
 
 ## Loading and preprocessing the data
 
@@ -279,7 +279,7 @@ median(total_steps_daily2$steps, na.rm = TRUE) # 10765
 There are differences in the number of steps taken on weekdays vs weekends. Overall weekdays have less steps per interval during the day, perhaps attributed to sitting at work. There is a spike between 8am and 9am, which may indicate the subject walks to work. Weekend steps also tend to start later, perhaps indicating the subject sleeps in on the weekend.
 
 ### 1. Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.
-Using the weekdays() function determine if a day is a Satturday or Sunday, and if so add "weekend" to a new factor variable "daytype", otherwise assign "weekday" to the variable.
+Using the weekdays() function determine if a day is a Saturday or Sunday, and if so add "weekend" to a new factor variable "daytype", otherwise assign "weekday" to the variable.
 
 ```r
 daytype <- function(date) {

@@ -74,7 +74,7 @@ img {
 <li>interval: Identifier for the 5-minute interval in which measurement was taken</li>
 </ul>
 <p>The dataset is stored in a comma-separated-value (CSV) file and there are a total of 17,568 observations in this dataset.</p>
-<p>The data can be found in the <a href="https://github.com/gregrgay/RepData_PeerAssessment1/blob/master/activity.zip">activity.zip file on GitHub</a></p>
+<p>The data can be found in the <a href="https://github.com/gregrgay/RepData_PeerAssessment1/blob/master/activity.zip">activity.zip file on GitHub</a> or <a href="https://github.com/gregrgay/RepData_PeerAssessment1/blob/master/activity.csv">activity.csv for a text version</a></p>
 </div>
 <div id="loading-and-preprocessing-the-data" class="section level2">
 <h2>Loading and preprocessing the data</h2>
@@ -235,7 +235,7 @@ hist(total_steps_daily2$steps, breaks=bin, col=1, freq=TRUE,  main=&quot;Frequen
 <p>There are differences in the number of steps taken on weekdays vs weekends. Overall weekdays have less steps per interval during the day, perhaps attributed to sitting at work. There is a spike between 8am and 9am, which may indicate the subject walks to work. Weekend steps also tend to start later, perhaps indicating the subject sleeps in on the weekend.</p>
 <div id="create-a-new-factor-variable-in-the-dataset-with-two-levels-weekday-and-weekend-indicating-whether-a-given-date-is-a-weekday-or-weekend-day." class="section level3">
 <h3>1. Create a new factor variable in the dataset with two levels – “weekday” and “weekend” indicating whether a given date is a weekday or weekend day.</h3>
-<p>Using the weekdays() function determine if a day is a Satturday or Sunday, and if so add “weekend” to a new factor variable “daytype”, otherwise assign “weekday” to the variable.</p>
+<p>Using the weekdays() function determine if a day is a Saturday or Sunday, and if so add “weekend” to a new factor variable “daytype”, otherwise assign “weekday” to the variable.</p>
 <pre class="r"><code>daytype &lt;- function(date) {
     if (weekdays(as.Date(date)) %in% c(&quot;Saturday&quot;, &quot;Sunday&quot;)) {
         &quot;weekend&quot;
